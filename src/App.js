@@ -1,29 +1,21 @@
-import React, { Suspense } from 'react';
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls } from '@react-three/drei';
+import { styled } from "styled-components";
+import Contact from "./components/Contact";
+import Animation from "./components/animation"
+import TopSection from "./components/topSection";
 
-import { Model } from './Model';
 
-// Ambient light 0.6 prede
+const Container = styled.div`
+height 100vh;
+background-color: purple;
+`
 
 export default function App() {
    return (
-      
-      <Canvas
-         camera={{ position: [2, 0, 12.25], fov: 15 }}
-         style={{
-            backgroundColor: 'transparent',
-            width: '100vw',
-            height: '100vh',
-         }}
-      >  
-         <ambientLight intensity={0.1} />    
-         <ambientLight intensity={0.1} />
-         <directionalLight intensity={0.4} />
-         <Suspense fallback={null}>
-            <Model position={[0.025, -0.9, 0]} />
-         </Suspense>
-         <OrbitControls />
-      </Canvas>
+   <Container> 
+      <TopSection/>
+      <Animation/> 
+      <Contact/>
+   </Container>  
+
    );
 }
