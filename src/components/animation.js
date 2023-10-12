@@ -14,7 +14,7 @@ return (
     <Canvas
     camera={{ position: [2, 0, 12.25], fov: 15 }}
     style={{
-       backgroundColor: 'transparent',
+       backgroundColor: 'lavender',
        width: '50vw',
        height: '50vh',
     }}
